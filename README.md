@@ -32,7 +32,7 @@ variable "ct-example" {
 # Cloudtrail module
 #######################
 module "ct-example" {
-  source    = "github.com/virsas/terraform_cloudtrail"
+  source    = "git::https://github.com/virsas/terraform_cloudtrail.git?ref=v1.0.0"
   instance  = var.ct-example
   bucket    = module.s3_logs.id
   kms       = module.kms-ct.arn
